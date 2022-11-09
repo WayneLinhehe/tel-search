@@ -46,5 +46,7 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 '''
-
+let formData = new FormData();
+formData.append('aaa', document.getElementById('abc').files[0]);
+fetch('/api/reminders', { method: "POST", body: formData });
 '''
