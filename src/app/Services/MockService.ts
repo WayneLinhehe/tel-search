@@ -31,7 +31,7 @@ export default function MockService() {
             reader.readAsText(file);
             });
         const formData: FormData = request.requestBody as unknown as FormData;
-        const uploadFile: File = formData.get('aaa') as File;
+        const uploadFile: File = formData.get('file') as File;
         const fileContents: string = await readFile(uploadFile);
         console.log('Uploaded file contents:', fileContents);
         // let attrs = JSON.parse(request.requestBody)
