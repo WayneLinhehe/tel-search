@@ -5,16 +5,27 @@ import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import { HashRouter } from "react-router-dom";
+
+
+import MockService from'./app/Services/MockService';
+
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
+
+MockService();
+
 root.render(
-  <React.StrictMode>
+  <HashRouter>
+    <React.StrictMode>
     <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>
+  </HashRouter>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
